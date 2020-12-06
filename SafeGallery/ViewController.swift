@@ -15,6 +15,8 @@ class ViewController: UIViewController {
   let loginAdmin = "alex"
   let passwordAdmin = "qwe"
   
+  var successfulLogin = false
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
     }
     let okSignInAction = UIAlertAction(title: "OK", style: .default) { (_) in
       if (self.loginTextField?.text == self.loginAdmin) ?? (self.passwordTextField?.text == self.passwordAdmin) {
-        print("CONGRATULATION!!!")
+        
       } else {
         self.present(warningAlert, animated: true) {
           self.present(signInAlert, animated: true)
