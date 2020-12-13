@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  // swiftlint:disable all
   private let pickerController = UIImagePickerController()
   
   private var loginTextField: UITextField?
@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         print(error.localizedDescription)
       }
     }
-    
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -99,11 +98,10 @@ class ViewController: UIViewController {
     
     present(signInAlert, animated: true)
   }
-
+  
   @objc func addImageButtonPressed(sender: UIButton!) {
     present(pickerController, animated: true)
   }
-  
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
