@@ -61,7 +61,8 @@ class UserImageStorageViewController: UIViewController {
         NSLayoutConstraint(item: addImageButton, attribute: .trailing, relatedBy: .equal,
                            toItem: self.view, attribute: .trailing, multiplier: 1,
                            constant: 0).isActive = true
-
+        NSLayoutConstraint(item: collectionView, attribute: .bottom, relatedBy: .equal, toItem: addImageButton, attribute: .top, multiplier: 1, constant: 0).isActive = true
+        
         self.view.layoutIfNeeded()
     }
 
@@ -107,6 +108,6 @@ extension UserImageStorageViewController: UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: (view.frame.width / 2) - 6, height: (view.frame.width / 2) - 6)
     }
 }

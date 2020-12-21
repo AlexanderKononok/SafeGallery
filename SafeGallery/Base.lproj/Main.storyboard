@@ -71,7 +71,7 @@
                         <viewLayoutGuide key="safeArea" id="XZ0-68-oYl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XZ0-68-oYl" firstAttribute="bottom" secondItem="OB8-6V-7do" secondAttribute="bottom" id="8DU-R0-9IT"/>
+                            <constraint firstItem="XZ0-68-oYl" firstAttribute="bottom" secondItem="OB8-6V-7do" secondAttribute="bottom" priority="250" id="8DU-R0-9IT"/>
                             <constraint firstItem="XZ0-68-oYl" firstAttribute="trailing" secondItem="OB8-6V-7do" secondAttribute="trailing" id="emb-z5-pEB"/>
                             <constraint firstItem="OB8-6V-7do" firstAttribute="top" secondItem="XZ0-68-oYl" secondAttribute="top" id="laC-sw-Zvr"/>
                             <constraint firstItem="OB8-6V-7do" firstAttribute="leading" secondItem="XZ0-68-oYl" secondAttribute="leading" id="uZf-oM-bZ8"/>
