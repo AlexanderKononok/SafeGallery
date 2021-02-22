@@ -8,12 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private var loginTextField: UITextField?
-    private var passwordTextField: UITextField?
-    private var user: User!
+
+    var loginTextField: UITextField!
+    var passwordTextField: UITextField!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        user = User(login: "", password: "")
 
         loadUserData()
     }
@@ -35,10 +38,18 @@ class ViewController: UIViewController {
 
     func addSignInAlert() {
         let signInAlert = UIAlertController(title: "Sign in", message: nil, preferredStyle: .alert)
+
         let warningAlert = UIAlertController(title: "WARNING",
                                              message: "Your login or password is wrong.\nTry again.",
                                              preferredStyle: .alert)
+        let warningEmptyLogin = UIAlertController(title: "WARNING",
+                                                  message: "Your login is empty!", preferredStyle: .alert)
+
         let okWarningAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.present(signInAlert, animated: true)
+        }
+
+        let okWarningEmptyLoginAction = UIAlertAction(title: "OK", style: .default) { (_) in
             self.present(signInAlert, animated: true)
         }
 
@@ -60,8 +71,15 @@ class ViewController: UIViewController {
         }
 
         let registrationAction = UIAlertAction(title: "Registration", style: .default) { (_) in
-            self.user.login = self.loginTextField?.text ?? "alex"
-            self.user.password = self.passwordTextField?.text ?? "qwe"
+            if self.loginTextField.text == "" {
+                self.present(warningEmptyLogin, animated: true) {
+                    self.present(signInAlert, animated: true)
+                }
+            } else {
+                self.user.login = String(self.loginTextField.text!)
+            }
+
+            self.user.password = self.passwordTextField?.text ?? ""
 
             let data = try? JSONEncoder().encode(self.user)
             UserDefaults.standard.setValue(data, forKey: "UserKey")
@@ -82,6 +100,7 @@ class ViewController: UIViewController {
         signInAlert.addAction(enterAction)
         signInAlert.addAction(registrationAction)
         warningAlert.addAction(okWarningAction)
+        warningEmptyLogin.addAction(okWarningEmptyLoginAction)
 
         present(signInAlert, animated: true)
     }

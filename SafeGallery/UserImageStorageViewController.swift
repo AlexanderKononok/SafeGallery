@@ -20,10 +20,13 @@ class UserImageStorageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        deleteAllImages()
         collectionView.dataSource = self
         collectionView.delegate = self
         pickerController.sourceType = .photoLibrary
         pickerController.delegate = self
+
+//        print(documentsPath.path)
 
         if fileManager.fileExists(atPath: imagesPath.path) == false {
             do {
@@ -32,9 +35,24 @@ class UserImageStorageViewController: UIViewController {
             } catch {
                 print(error.localizedDescription)
             }
+        } else {
+            if let images = try? fileManager.contentsOfDirectory(atPath: imagesPath.path) {
+                for imageName in images {
+                    print(imageName)
+                    if let image = UIImage(contentsOfFile: "\(imagesPath.path)/\(imageName)") {
+                        imagesArray.append(image)
+                    }
+                }
+            }
         }
 
         addImageButton()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        print("The count of images: \(imagesArray.count)")
     }
 
     func addImageButton() {
@@ -61,14 +79,31 @@ class UserImageStorageViewController: UIViewController {
         NSLayoutConstraint(item: addImageButton, attribute: .trailing, relatedBy: .equal,
                            toItem: self.view, attribute: .trailing, multiplier: 1,
                            constant: 0).isActive = true
-        NSLayoutConstraint(item: collectionView, attribute: .bottom, relatedBy: .equal, toItem: addImageButton, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        
+        NSLayoutConstraint(item: collectionView, attribute: .bottom, relatedBy: .equal,
+                           toItem: addImageButton, attribute: .top, multiplier: 1,
+                           constant: 0).isActive = true
+
         self.view.layoutIfNeeded()
     }
 
     @objc func addImageButtonPressed(sender: UIButton!) {
         present(pickerController, animated: true)
     }
+
+    func saveImage(image: UIImage) {
+        let data = image.pngData()
+        let imagePath = imagesPath.appendingPathComponent("\(Date().timeIntervalSince1970).png")
+        fileManager.createFile(atPath: imagePath.path, contents: data, attributes: nil)
+    }
+
+    func deleteAllImages() {
+        do {
+            try fileManager.removeItem(atPath: imagesPath.path)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
 }
 
 extension UserImageStorageViewController: UIImagePickerControllerDelegate,
@@ -77,6 +112,8 @@ extension UserImageStorageViewController: UIImagePickerControllerDelegate,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let chosenImage = info[.originalImage] as? UIImage {
             imagesArray.append(chosenImage)
+            saveImage(image: chosenImage)
+            print(imagesArray.count)
         }
 
         picker.dismiss(animated: true) {
@@ -109,5 +146,16 @@ extension UserImageStorageViewController: UICollectionViewDataSource,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width / 2) - 6, height: (view.frame.width / 2) - 6)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let imageViewController = imageStoryboard.instantiateViewController(
+            identifier: String(describing: ImageViewController.self)) as? ImageViewController
+        self.navigationController?.pushViewController(imageViewController ?? UIViewController(), animated: true)
+
+        if let images = try? fileManager.contentsOfDirectory(atPath: imagesPath.path) {
+            imageViewController?.selectedImageName = images[indexPath.item]
+        }
     }
 }
