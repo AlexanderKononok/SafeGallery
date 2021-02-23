@@ -21,39 +21,18 @@ class UserImageStorageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        deleteAllImages()
         collectionView.dataSource = self
         collectionView.delegate = self
         pickerController.sourceType = .photoLibrary
         pickerController.delegate = self
-
-//        print(documentsPath.path)
-
-        if fileManager.fileExists(atPath: imagesPath.path) == false {
-            do {
-                try fileManager.createDirectory(atPath: imagesPath.path,
-                                                withIntermediateDirectories: true, attributes: nil)
-            } catch {
-                print(error.localizedDescription)
-            }
-        } else {
-            if let images = try? fileManager.contentsOfDirectory(atPath: imagesPath.path) {
-                for imageName in images {
-                    print(imageName)
-                    if let image = UIImage(contentsOfFile: "\(imagesPath.path)/\(imageName)") {
-                        imagesArray.append(image)
-                    }
-                }
-            }
-        }
-
-        addImageButton()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        print("The count of images: \(imagesArray.count)")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        imagesArray = Array()
+        addImagesToArrayFromPath()
+        addImageButton()
+        self.collectionView.reloadData()
     }
 
     func addImageButton() {
@@ -97,11 +76,22 @@ class UserImageStorageViewController: UIViewController {
         fileManager.createFile(atPath: imagePath.path, contents: data, attributes: nil)
     }
 
-    func deleteAllImages() {
-        do {
-            try fileManager.removeItem(atPath: imagesPath.path)
-        } catch {
-            print(error.localizedDescription)
+    func addImagesToArrayFromPath() {
+        if fileManager.fileExists(atPath: imagesPath.path) == false {
+            do {
+                try fileManager.createDirectory(atPath: imagesPath.path,
+                                                withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            if let images = try? fileManager.contentsOfDirectory(atPath: imagesPath.path) {
+                for imageName in images {
+                    if let image = UIImage(contentsOfFile: "\(imagesPath.path)/\(imageName)") {
+                        imagesArray.append(image)
+                    }
+                }
+            }
         }
     }
 }
@@ -113,12 +103,14 @@ extension UserImageStorageViewController: UIImagePickerControllerDelegate,
         if let chosenImage = info[.originalImage] as? UIImage {
             imagesArray.append(chosenImage)
             saveImage(image: chosenImage)
-            print(imagesArray.count)
+            self.collectionView.reloadData()
         }
 
         picker.dismiss(animated: true) {
             self.collectionView.reloadData()
         }
+
+        self.collectionView.reloadData()
     }
 }
 
