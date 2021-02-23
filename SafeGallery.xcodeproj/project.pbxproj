@@ -16,7 +16,7 @@
 		C7BA443C257404370072F662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA443A257404370072F662 /* Main.storyboard */; };
 		C7BA443E257404390072F662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BA443D257404390072F662 /* Assets.xcassets */; };
 		C7BA4441257404390072F662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BA443F257404390072F662 /* LaunchScreen.storyboard */; };
-		C7BF014825866F2A00C7E68B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF014725866F2A00C7E68B /* ImageCollectionViewCell.swift */; };
+		C7F2579625E4EFEF004549F6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2579525E4EFEF004549F6 /* ImageCollectionViewCell.swift */; };
 		C7F51FDA2593BDB300E9FFAE /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F51FD92593BDB300E9FFAE /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		C7BA443D257404390072F662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7BA4440257404390072F662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7BA4442257404390072F662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7BF014725866F2A00C7E68B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7F2579525E4EFEF004549F6 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7F51FD92593BDB300E9FFAE /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		FCCC87AB697491646B8B9FC6 /* Pods-SafeGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeGallery.debug.xcconfig"; path = "Target Support Files/Pods-SafeGallery/Pods-SafeGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,8 +86,8 @@
 				C72F4979257E8EBE000DB101 /* User.swift */,
 				C7BA443A257404370072F662 /* Main.storyboard */,
 				C7F51FD92593BDB300E9FFAE /* ImageViewController.swift */,
+				C7F2579525E4EFEF004549F6 /* ImageCollectionViewCell.swift */,
 				C798FF7B258F9B5900AF12C3 /* UserImageStorageViewController.swift */,
-				C7BF014725866F2A00C7E68B /* ImageCollectionViewCell.swift */,
 				C7BA443D257404390072F662 /* Assets.xcassets */,
 				C7BA443F257404390072F662 /* LaunchScreen.storyboard */,
 				C7BA4442257404390072F662 /* Info.plist */,
@@ -218,9 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72F497A257E8EBE000DB101 /* User.swift in Sources */,
-				C7BF014825866F2A00C7E68B /* ImageCollectionViewCell.swift in Sources */,
 				C7BA4439257404370072F662 /* ViewController.swift in Sources */,
 				C7F51FDA2593BDB300E9FFAE /* ImageViewController.swift in Sources */,
+				C7F2579625E4EFEF004549F6 /* ImageCollectionViewCell.swift in Sources */,
 				C798FF7C258F9B5900AF12C3 /* UserImageStorageViewController.swift in Sources */,
 				C7BA4435257404370072F662 /* AppDelegate.swift in Sources */,
 				C7BA4437257404370072F662 /* SceneDelegate.swift in Sources */,

@@ -26,6 +26,12 @@ class ImageViewController: UIViewController {
     }
 
     @IBAction func deleteImageButtonPressed(_ sender: Any) {
-        print("Image \"\(selectedImageName)\" was deleted")
+        do {
+            try fileManager.removeItem(atPath: "\(imagesPath.path)/\(selectedImageName)")
+        } catch {
+            print(error.localizedDescription)
+        }
+
+        navigationController?.popViewController(animated: true)
     }
 }

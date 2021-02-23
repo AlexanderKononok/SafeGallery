@@ -11,6 +11,7 @@ class UserImageStorageViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var imagesArray: [UIImage] = Array()
+
     lazy var imagesPath = documentsPath.appendingPathComponent("Images")
 
     let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -103,7 +104,6 @@ class UserImageStorageViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
 }
 
 extension UserImageStorageViewController: UIImagePickerControllerDelegate,
