@@ -15,18 +15,31 @@
 			dependencies = (
 			);
 			name = SwiftLint;
-			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0755D43BF6C6C737F406FFB2AA202827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A5EB7CC1BDB41CB01FEC9F0D5F2BC3F8 /* Pods-SafeGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC8F1E5CFF7956FA6F1C6D079A6D9CE /* Pods-SafeGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4FD0C95E937B3C379E1A5CFD2A4F4BD /* Pods-SafeGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 171E0DE4A50F482AF6EE0113CD949AAE /* Pods-SafeGallery-dummy.m */; };
+		1C9781FADD0F91097C0A960154D6A3DE /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4F9258B922802E1F16A76FFD51F69 /* Keychain.swift */; };
+		2A2C53BDFF3F837D6DFE0A82B54DCF91 /* KeychainBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F147CCD2C2602DA28CDB2DD78C778 /* KeychainBridge.swift */; };
+		46C9AB24402971DE70056A5EAA804EB5 /* KeychainSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847223E6C8F8E84D912B1CFC3912F5BD /* KeychainSerializable.swift */; };
+		6131220A3B53DCAD2012003F06ABDD71 /* SwiftyKeychainKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C552CE87592FEF289D7AD8D2856A3DBA /* SwiftyKeychainKit-dummy.m */; };
+		6DB0152ECB4A1A5118447FD28ADF94F8 /* SwiftyKeychainKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6308416DA0A2DCF7A2AA6597429278A0 /* SwiftyKeychainKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E96B8C2DC5A508E4768961C710C020E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		76E64ACBE0A787452B90D9DA5FCC0205 /* Pods-SafeGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 176F07B5DF7176E5A080E827A916A98F /* Pods-SafeGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A07E6355AE8099D68FCCE096B35F0EDC /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065FC88E08779CA1FCC0EDA925E10E9 /* KeychainError.swift */; };
+		AA54C6C94B70892054B4A6D98E0926BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F57551FA9C7B87CB9AD273F53A9CF373 /* Pods-SafeGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFE496F581AA1573E5D9C7145AD464E /* Pods-SafeGallery-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		167DDA16A035DFFD08C808A5EC11ED17 /* PBXContainerItemProxy */ = {
+		522A1481FDEA5DC9DBA1AC151828AB7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9DFE73C3E0DB9CB93C095904997F37A;
+			remoteInfo = SwiftyKeychainKit;
+		};
+		F58D65291F8C720290A0D4B57A0457DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -36,39 +49,84 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		171E0DE4A50F482AF6EE0113CD949AAE /* Pods-SafeGallery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SafeGallery-dummy.m"; sourceTree = "<group>"; };
-		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		3FC8F1E5CFF7956FA6F1C6D079A6D9CE /* Pods-SafeGallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SafeGallery-umbrella.h"; sourceTree = "<group>"; };
+		176F07B5DF7176E5A080E827A916A98F /* Pods-SafeGallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SafeGallery-umbrella.h"; sourceTree = "<group>"; };
+		24C4F9258B922802E1F16A76FFD51F69 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Sources/Keychain.swift; sourceTree = "<group>"; };
+		258C70C973F31097468E616D018311FC /* SwiftyKeychainKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyKeychainKit.framework; path = SwiftyKeychainKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DF595E677F68B5D8FBB30574776D41 /* SwiftyKeychainKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyKeychainKit-prefix.pch"; sourceTree = "<group>"; };
+		3065FC88E08779CA1FCC0EDA925E10E9 /* KeychainError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainError.swift; path = Sources/KeychainError.swift; sourceTree = "<group>"; };
+		391F147CCD2C2602DA28CDB2DD78C778 /* KeychainBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainBridge.swift; path = Sources/KeychainBridge.swift; sourceTree = "<group>"; };
+		3D43DAC948A0F2C7578D8CFE55D75CD8 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		3EE933B51FAC8C4B25D35BBD4C8C19F5 /* Pods-SafeGallery-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeGallery-acknowledgements.plist"; sourceTree = "<group>"; };
+		4BEDD4E317851AE0C6D61EFFEB604A61 /* Pods-SafeGallery-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SafeGallery-frameworks.sh"; sourceTree = "<group>"; };
+		52288E332DFB1651BF0220B27B6F2731 /* Pods-SafeGallery-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SafeGallery-acknowledgements.markdown"; sourceTree = "<group>"; };
+		553DD37B101959E982D9C8873D444F87 /* SwiftyKeychainKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyKeychainKit.debug.xcconfig; sourceTree = "<group>"; };
+		597FC713347C17BE5AE099A867A8486C /* SwiftyKeychainKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyKeychainKit-Info.plist"; sourceTree = "<group>"; };
+		5B11B752C148C293EFE5272553AC6B6F /* Pods-SafeGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeGallery.release.xcconfig"; sourceTree = "<group>"; };
+		6308416DA0A2DCF7A2AA6597429278A0 /* SwiftyKeychainKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyKeychainKit-umbrella.h"; sourceTree = "<group>"; };
+		66664BE02CAC90EFCBA7B949259B740E /* Pods-SafeGallery-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeGallery-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7BB232E641C5D0D6ED0CFBD948AE628E /* Pods-SafeGallery-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeGallery-acknowledgements.plist"; sourceTree = "<group>"; };
-		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
-		839988554FF1CDC07E204749931C9B43 /* Pods-SafeGallery-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SafeGallery-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4CDEB0239495BFB450A1E6089F97932 /* Pods-SafeGallery-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafeGallery-Info.plist"; sourceTree = "<group>"; };
-		C0EF18042BBD18F810A4DFB21BC35632 /* Pods-SafeGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeGallery.release.xcconfig"; sourceTree = "<group>"; };
-		DE7D01E724AEB86A1941E105089DA73F /* Pods-SafeGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeGallery.debug.xcconfig"; sourceTree = "<group>"; };
-		E8A3CB88647DA3E3FDC8D8753154806E /* Pods-SafeGallery.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SafeGallery.modulemap"; sourceTree = "<group>"; };
-		ED4D8F7239BC66EB767299FC730C686D /* Pods_SafeGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		847223E6C8F8E84D912B1CFC3912F5BD /* KeychainSerializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSerializable.swift; path = Sources/KeychainSerializable.swift; sourceTree = "<group>"; };
+		879603C5E74BBA58A137C8D95D0DCEC9 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		971EFAC29FD39AA2897F9FC432702014 /* SwiftyKeychainKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyKeychainKit.release.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B701E27E4BC86416D2392776838F0450 /* SwiftyKeychainKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyKeychainKit.modulemap; sourceTree = "<group>"; };
+		C3479AAA7D12D7E657E78F3BC4E12CFB /* Pods-SafeGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafeGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		C552CE87592FEF289D7AD8D2856A3DBA /* SwiftyKeychainKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyKeychainKit-dummy.m"; sourceTree = "<group>"; };
+		ED4D8F7239BC66EB767299FC730C686D /* Pods_SafeGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SafeGallery.framework; path = "Pods-SafeGallery.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9FCB7A116FEE4CEE860857563BA835 /* Pods-SafeGallery.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SafeGallery.modulemap"; sourceTree = "<group>"; };
+		FDFE496F581AA1573E5D9C7145AD464E /* Pods-SafeGallery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SafeGallery-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AB25044A5D21FEAF9FD5768914D9736F /* Frameworks */ = {
+		3AF35A63AF192F1C69A81619F09E7B48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0755D43BF6C6C737F406FFB2AA202827 /* Foundation.framework in Frameworks */,
+				AA54C6C94B70892054B4A6D98E0926BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		422C74FBD6D7F5A7CDA7627C625C3EF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E96B8C2DC5A508E4768961C710C020E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F87A0AF4B1DE8ABC57A9BBDFAAFB858 /* Targets Support Files */ = {
+		0081CFD0D9DEA6226A55C173F2B1A3B8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE2078B5A236462AB117A97B447BC468 /* Pods-SafeGallery */,
+				879603C5E74BBA58A137C8D95D0DCEC9 /* SwiftLint.debug.xcconfig */,
+				3D43DAC948A0F2C7578D8CFE55D75CD8 /* SwiftLint.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		468ABF285648AF8948DBCE5CD240C29F /* SwiftyKeychainKit */ = {
+			isa = PBXGroup;
+			children = (
+				24C4F9258B922802E1F16A76FFD51F69 /* Keychain.swift */,
+				391F147CCD2C2602DA28CDB2DD78C778 /* KeychainBridge.swift */,
+				3065FC88E08779CA1FCC0EDA925E10E9 /* KeychainError.swift */,
+				847223E6C8F8E84D912B1CFC3912F5BD /* KeychainSerializable.swift */,
+				F7DCB7A4520A0182F26558A9E4E5B0BB /* Support Files */,
+			);
+			name = SwiftyKeychainKit;
+			path = SwiftyKeychainKit;
+			sourceTree = "<group>";
+		};
+		5653000D490AC9D46AFA09EC431B0A11 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				0081CFD0D9DEA6226A55C173F2B1A3B8 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -79,43 +137,36 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
+		63209C336A8A9DC0CF18E4D45824FBC6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
-				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLint";
-			sourceTree = "<group>";
-		};
-		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
+				5653000D490AC9D46AFA09EC431B0A11 /* SwiftLint */,
+				468ABF285648AF8948DBCE5CD240C29F /* SwiftyKeychainKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CD2CC56BFE925F590ED061019872F033 /* Products */ = {
+		AE6102EE505100024772B8D83FFF2DF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				ED4D8F7239BC66EB767299FC730C686D /* Pods_SafeGallery.framework */,
+				258C70C973F31097468E616D018311FC /* SwiftyKeychainKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE2078B5A236462AB117A97B447BC468 /* Pods-SafeGallery */ = {
+		BA84593DE27F23A596DF73AF979F52F3 /* Pods-SafeGallery */ = {
 			isa = PBXGroup;
 			children = (
-				E8A3CB88647DA3E3FDC8D8753154806E /* Pods-SafeGallery.modulemap */,
-				839988554FF1CDC07E204749931C9B43 /* Pods-SafeGallery-acknowledgements.markdown */,
-				7BB232E641C5D0D6ED0CFBD948AE628E /* Pods-SafeGallery-acknowledgements.plist */,
-				171E0DE4A50F482AF6EE0113CD949AAE /* Pods-SafeGallery-dummy.m */,
-				A4CDEB0239495BFB450A1E6089F97932 /* Pods-SafeGallery-Info.plist */,
-				3FC8F1E5CFF7956FA6F1C6D079A6D9CE /* Pods-SafeGallery-umbrella.h */,
-				DE7D01E724AEB86A1941E105089DA73F /* Pods-SafeGallery.debug.xcconfig */,
-				C0EF18042BBD18F810A4DFB21BC35632 /* Pods-SafeGallery.release.xcconfig */,
+				EE9FCB7A116FEE4CEE860857563BA835 /* Pods-SafeGallery.modulemap */,
+				52288E332DFB1651BF0220B27B6F2731 /* Pods-SafeGallery-acknowledgements.markdown */,
+				3EE933B51FAC8C4B25D35BBD4C8C19F5 /* Pods-SafeGallery-acknowledgements.plist */,
+				FDFE496F581AA1573E5D9C7145AD464E /* Pods-SafeGallery-dummy.m */,
+				4BEDD4E317851AE0C6D61EFFEB604A61 /* Pods-SafeGallery-frameworks.sh */,
+				66664BE02CAC90EFCBA7B949259B740E /* Pods-SafeGallery-Info.plist */,
+				176F07B5DF7176E5A080E827A916A98F /* Pods-SafeGallery-umbrella.h */,
+				C3479AAA7D12D7E657E78F3BC4E12CFB /* Pods-SafeGallery.debug.xcconfig */,
+				5B11B752C148C293EFE5272553AC6B6F /* Pods-SafeGallery.release.xcconfig */,
 			);
 			name = "Pods-SafeGallery";
 			path = "Target Support Files/Pods-SafeGallery";
@@ -126,9 +177,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				965877409E01FB3D85D85E90E6B30185 /* Pods */,
-				CD2CC56BFE925F590ED061019872F033 /* Products */,
-				0F87A0AF4B1DE8ABC57A9BBDFAAFB858 /* Targets Support Files */,
+				63209C336A8A9DC0CF18E4D45824FBC6 /* Pods */,
+				AE6102EE505100024772B8D83FFF2DF3 /* Products */,
+				D28807438C4B0A1AA57687451B29A8E2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,22 +191,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
+		D28807438C4B0A1AA57687451B29A8E2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
+				BA84593DE27F23A596DF73AF979F52F3 /* Pods-SafeGallery */,
 			);
-			path = SwiftLint;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F7DCB7A4520A0182F26558A9E4E5B0BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B701E27E4BC86416D2392776838F0450 /* SwiftyKeychainKit.modulemap */,
+				C552CE87592FEF289D7AD8D2856A3DBA /* SwiftyKeychainKit-dummy.m */,
+				597FC713347C17BE5AE099A867A8486C /* SwiftyKeychainKit-Info.plist */,
+				28DF595E677F68B5D8FBB30574776D41 /* SwiftyKeychainKit-prefix.pch */,
+				6308416DA0A2DCF7A2AA6597429278A0 /* SwiftyKeychainKit-umbrella.h */,
+				553DD37B101959E982D9C8873D444F87 /* SwiftyKeychainKit.debug.xcconfig */,
+				971EFAC29FD39AA2897F9FC432702014 /* SwiftyKeychainKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyKeychainKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		441F244BBE7EE556ECF1664FE8C7CFD1 /* Headers */ = {
+		52B7FC3B621688A18FCEAE73F9ACE863 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EB7CC1BDB41CB01FEC9F0D5F2BC3F8 /* Pods-SafeGallery-umbrella.h in Headers */,
+				76E64ACBE0A787452B90D9DA5FCC0205 /* Pods-SafeGallery-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E32290BCA4FC4FB42E141503E959E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB0152ECB4A1A5118447FD28ADF94F8 /* SwiftyKeychainKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,21 +238,40 @@
 /* Begin PBXNativeTarget section */
 		396AEF590A7EFA7219518DF7A583A187 /* Pods-SafeGallery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32932F0B33C42B354A1EA402963F7BC2 /* Build configuration list for PBXNativeTarget "Pods-SafeGallery" */;
+			buildConfigurationList = FDAA536CCB717F9968BC093AF2267AA2 /* Build configuration list for PBXNativeTarget "Pods-SafeGallery" */;
 			buildPhases = (
-				441F244BBE7EE556ECF1664FE8C7CFD1 /* Headers */,
-				DCAE00EA6496861C2864745CE52B50B6 /* Sources */,
-				AB25044A5D21FEAF9FD5768914D9736F /* Frameworks */,
-				0790EBB9F355C3523E9E74DFDEBAB043 /* Resources */,
+				52B7FC3B621688A18FCEAE73F9ACE863 /* Headers */,
+				A9BE963B23A2BB815F769028C121C63E /* Sources */,
+				3AF35A63AF192F1C69A81619F09E7B48 /* Frameworks */,
+				B6A564487F2ED4C877C54BF27E5F7B18 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EDA70FEACD90E81E15D7349AA5B0E1C6 /* PBXTargetDependency */,
+				0CA7196C4DB4B412318B45032F47DA10 /* PBXTargetDependency */,
+				8F80D462E3D04894B84DE152C26984C1 /* PBXTargetDependency */,
 			);
 			name = "Pods-SafeGallery";
 			productName = "Pods-SafeGallery";
 			productReference = ED4D8F7239BC66EB767299FC730C686D /* Pods_SafeGallery.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9DFE73C3E0DB9CB93C095904997F37A /* SwiftyKeychainKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE918C4A47A550064BFAE65E94D4F938 /* Build configuration list for PBXNativeTarget "SwiftyKeychainKit" */;
+			buildPhases = (
+				EC6E32290BCA4FC4FB42E141503E959E /* Headers */,
+				80CAC48A83ECE4755950C5F7C5F24745 /* Sources */,
+				422C74FBD6D7F5A7CDA7627C625C3EF1 /* Frameworks */,
+				9B9DBA54C0CC0CA75CCBE6E31D554495 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyKeychainKit;
+			productName = SwiftyKeychainKit;
+			productReference = 258C70C973F31097468E616D018311FC /* SwiftyKeychainKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -199,18 +292,26 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CD2CC56BFE925F590ED061019872F033 /* Products */;
+			productRefGroup = AE6102EE505100024772B8D83FFF2DF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				396AEF590A7EFA7219518DF7A583A187 /* Pods-SafeGallery */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
+				B9DFE73C3E0DB9CB93C095904997F37A /* SwiftyKeychainKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0790EBB9F355C3523E9E74DFDEBAB043 /* Resources */ = {
+		9B9DBA54C0CC0CA75CCBE6E31D554495 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6A564487F2ED4C877C54BF27E5F7B18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,29 +321,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DCAE00EA6496861C2864745CE52B50B6 /* Sources */ = {
+		80CAC48A83ECE4755950C5F7C5F24745 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FD0C95E937B3C379E1A5CFD2A4F4BD /* Pods-SafeGallery-dummy.m in Sources */,
+				1C9781FADD0F91097C0A960154D6A3DE /* Keychain.swift in Sources */,
+				2A2C53BDFF3F837D6DFE0A82B54DCF91 /* KeychainBridge.swift in Sources */,
+				A07E6355AE8099D68FCCE096B35F0EDC /* KeychainError.swift in Sources */,
+				46C9AB24402971DE70056A5EAA804EB5 /* KeychainSerializable.swift in Sources */,
+				6131220A3B53DCAD2012003F06ABDD71 /* SwiftyKeychainKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9BE963B23A2BB815F769028C121C63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57551FA9C7B87CB9AD273F53A9CF373 /* Pods-SafeGallery-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EDA70FEACD90E81E15D7349AA5B0E1C6 /* PBXTargetDependency */ = {
+		0CA7196C4DB4B412318B45032F47DA10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 167DDA16A035DFFD08C808A5EC11ED17 /* PBXContainerItemProxy */;
+			targetProxy = F58D65291F8C720290A0D4B57A0457DA /* PBXContainerItemProxy */;
+		};
+		8F80D462E3D04894B84DE152C26984C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyKeychainKit;
+			target = B9DFE73C3E0DB9CB93C095904997F37A /* SwiftyKeychainKit */;
+			targetProxy = 522A1481FDEA5DC9DBA1AC151828AB7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		281C80E1FAACC162047DD2CA82492281 /* Debug */ = {
+		264A8BF86703AAF047076ABCB70A8453 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE7D01E724AEB86A1941E105089DA73F /* Pods-SafeGallery.debug.xcconfig */;
+			baseConfigurationReference = C3479AAA7D12D7E657E78F3BC4E12CFB /* Pods-SafeGallery.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -343,44 +462,6 @@
 			};
 			name = Debug;
 		};
-		70BE5A6E52E3FD6A6FFE0B0D11FCDAD0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0EF18042BBD18F810A4DFB21BC35632 /* Pods-SafeGallery.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SafeGallery/Pods-SafeGallery-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SafeGallery/Pods-SafeGallery.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,13 +524,49 @@
 			};
 			name = Release;
 		};
+		8E95CED625F792F8229E2C1A25341548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 971EFAC29FD39AA2897F9FC432702014 /* SwiftyKeychainKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyKeychainKit/SwiftyKeychainKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyKeychainKit/SwiftyKeychainKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyKeychainKit/SwiftyKeychainKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyKeychainKit;
+				PRODUCT_NAME = SwiftyKeychainKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AD81E62ACCB0B7A923FC8AA288F9921E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
+			baseConfigurationReference = 3D43DAC948A0F2C7578D8CFE55D75CD8 /* SwiftLint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,13 +577,86 @@
 			};
 			name = Release;
 		};
+		B286BE3975648B59D7950BC25742E4E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553DD37B101959E982D9C8873D444F87 /* SwiftyKeychainKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyKeychainKit/SwiftyKeychainKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyKeychainKit/SwiftyKeychainKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyKeychainKit/SwiftyKeychainKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyKeychainKit;
+				PRODUCT_NAME = SwiftyKeychainKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C772C28624595FB40C337D462C034748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B11B752C148C293EFE5272553AC6B6F /* Pods-SafeGallery.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SafeGallery/Pods-SafeGallery-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafeGallery/Pods-SafeGallery.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
+			baseConfigurationReference = 879603C5E74BBA58A137C8D95D0DCEC9 /* SwiftLint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,15 +669,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32932F0B33C42B354A1EA402963F7BC2 /* Build configuration list for PBXNativeTarget "Pods-SafeGallery" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				281C80E1FAACC162047DD2CA82492281 /* Debug */,
-				70BE5A6E52E3FD6A6FFE0B0D11FCDAD0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -502,6 +683,24 @@
 			buildConfigurations = (
 				EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */,
 				AD81E62ACCB0B7A923FC8AA288F9921E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE918C4A47A550064BFAE65E94D4F938 /* Build configuration list for PBXNativeTarget "SwiftyKeychainKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B286BE3975648B59D7950BC25742E4E6 /* Debug */,
+				8E95CED625F792F8229E2C1A25341548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAA536CCB717F9968BC093AF2267AA2 /* Build configuration list for PBXNativeTarget "Pods-SafeGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				264A8BF86703AAF047076ABCB70A8453 /* Debug */,
+				C772C28624595FB40C337D462C034748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

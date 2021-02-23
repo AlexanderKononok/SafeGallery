@@ -7,5 +7,6 @@ target 'SafeGallery' do
 
   # Pods for SafeGallery
   pod 'SwiftLint'
+  pod 'SwiftyKeychainKit', '1.0.0-beta.2'
 
 end

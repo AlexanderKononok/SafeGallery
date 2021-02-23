@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import SwiftyKeychainKit
 
 class ViewController: UIViewController {
 
     var loginTextField: UITextField!
     var passwordTextField: UITextField!
     var user: User!
+
+    let keychain = Keychain(service: "alex.kononok.SafeGallery")
+    let passwordKey = KeychainKey<String>(key: "keychainPassword123")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +58,10 @@ class ViewController: UIViewController {
         }
 
         let enterAction = UIAlertAction(title: "Enter", style: .default) { (_) in
-            if (self.loginTextField?.text == self.user.login) && (self.passwordTextField?.text == self.user.password) {
+
+            let safePassword = try? self.keychain.get(self.passwordKey)
+
+            if (self.loginTextField?.text == self.user.login) && (self.passwordTextField?.text == safePassword) {
 
                 let userImageStorageStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let userImageStorageViewController = userImageStorageStoryboard.instantiateViewController(
@@ -79,7 +86,7 @@ class ViewController: UIViewController {
                 self.user.login = String(self.loginTextField.text!)
             }
 
-            self.user.password = self.passwordTextField?.text ?? ""
+            try? self.keychain.set(self.passwordTextField?.text ?? "", for: self.passwordKey)
 
             let data = try? JSONEncoder().encode(self.user)
             UserDefaults.standard.setValue(data, forKey: "UserKey")
